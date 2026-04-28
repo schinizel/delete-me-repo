@@ -1,0 +1,12 @@
+name: spike-1777350058
+on:
+  workflow_dispatch:
+    inputs:
+      app:
+        description: app name
+        required: true
+jobs:
+  noop:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "trigger fired for ${{ github.event.inputs.app }}"
